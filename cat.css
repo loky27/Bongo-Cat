@@ -1,0 +1,76 @@
+body{
+    background-color: black;   
+    color: white;
+    font-size: 100%;
+}
+#keys{
+    justify-content: space-around;
+    display: flex;
+}
+#conten{
+    position: relative;
+}
+.cat{
+    position: absolute;   
+    width: 37%;
+    left: 49%;
+    z-index: 1;
+}
+.pawrigth{
+    position: absolute;
+    width: 14%;
+    left: 36%;
+    z-index: 9;
+    top: 584%;}
+.pawrigthdown{
+    position: absolute;
+    width: 20%;
+    left: 30%;
+    z-index: 1;
+    top: 598%;
+}
+.pawleft{
+    position: absolute;
+    width: 10%;
+    left: 69%;
+    z-index: 2;
+    top: 1281%;
+}
+.pawleftdown{
+    position: absolute;
+    width: 14%;
+    left: 63%;
+    z-index: 2;
+    top: 1613%;
+    transform: rotate(15.5deg);
+}
+.mouth{
+    position: absolute;
+    width: 5%;
+    left: 54%;
+    z-index: 2;
+    top: 1613%;
+}
+.key {
+    background: #333;
+    border: 2px solid #252525;
+    box-shadow: inset -6px -4px 0 0 #1b1b1b;
+    padding-right: 6px;
+    color: rgb(245, 245, 245);
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+hr{
+    position: relative;
+    height: 1rem;
+    background: #f4f4f4;
+    border: none;
+    transform: rotate(16.5deg);
+    z-index: 0;
+    top: 17rem;
+    right: 28px;
+    width: 102%;
+
+}
