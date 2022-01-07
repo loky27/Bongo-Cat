@@ -9,7 +9,22 @@
     <link rel="stylesheet" href="crud.css">
     <title>bongo cat</title>
 </head>
-
+<script>
+    let Instrument=``
+    function sound(idHtml,soun,neElement,instrument='bongo',idpart=`instrument`){
+        Instrument=instrument
+        var  audio= new Audio(`/sounds/${soun}`)
+        const elemetn=document.getElementById(`${idHtml}`).lastElementChild.outerHTML
+        document.getElementById(`${idHtml}`).innerHTML =`${neElement}`
+        document.getElementById(`${idpart}`).innerHTML =
+        `<img  class="instrument" src="./images/${Instrument}.png" alt="">`
+        audio.play();
+        setTimeout(() => 
+        document.getElementById(`${idHtml}`).innerHTML =`${elemetn}`,
+         50)
+        audio=``
+    }
+</script>
 <body>
     <div>
         <nav class="col-12">
@@ -19,8 +34,21 @@
                         <span>Bongos</span>
                     </div>
                     <div class="col-12">
-                        <span class="key">A</span>
-                        <span class="key">D</span>
+                        <span onclick="sound(
+                        `pawR`,
+                        'bongo1.mp3',
+                        `<img  class='pawrigthdown' src='/images/paw-right-down.svg' alt='.'>`,
+                        `bongo`
+                        )"
+                         class="key">A</span>
+                        <span class="key"
+                        onclick="sound(
+                        `pawL`,
+                        'bongo0.mp3',
+                        `<img  class='pawleftdown' src='/images/paw-left-down-withe.svg' alt='.'>`,
+                        `bongo`
+                        )"
+                        >D</span>
                     </div>
                 </div>
                 <div class=" col-1">
@@ -28,7 +56,13 @@
                         <span>Cymbal</span>
                     </div>
                     <div class="col-12">
-                        <span class="key">C</span>
+                        <span 
+                        onclick="sound(
+                            `pawL`,
+                            'cynbal.mp3',
+                            `<img  class='pawleftdown' src='/images/paw-left-down-withe.svg' alt='.'>`,
+                            `cymbal` )"
+                        class="key">C</span>
                     </div>
                 </div>
                 <div class=" col-1">
@@ -36,7 +70,13 @@
                         <span>Cowbell</span>
                     </div>
                     <div class="col-12">
-                        <span class="key">F</span>
+                        <span
+                        onclick="sound(
+                            `pawL`,
+                            'cowbell.mp3',
+                            `<img  class='pawleftdown' src='/images/paw-left-down-withe.svg' alt='.'>`,
+                            `cowbell` )"
+                        class="key">F</span>
                     </div>
                 </div>
                 <div class=" col-1">
@@ -44,7 +84,13 @@
                         <span>Tambourine</span>
                     </div>
                     <div class="col-12">
-                        <span class="key">B</span>
+                        <span 
+                        onclick="sound(
+                            `pawL`,
+                            'tambourine.mp3',
+                            `<img  class='pawleftdown' src='/images/paw-left-down-withe.svg' alt='.'>`,
+                            `tambourine` )"
+                        class="key">B</span>
                     </div>
                 </div>
                 <div class=" col-1">
@@ -52,7 +98,13 @@
                         <span>Meow</span>
                     </div>
                     <div class="col-12">
-                        <span class="key key-wide">SPACE</span>
+                        <span
+                        onclick="sound(
+                            `mouth`,
+                            'meow.mp3',
+                            ` <img  class='mouth' src='./images/mouth-withe-point.svg' alt=''>`,
+                             )"
+                        class="key key-wide">SPACE</span>
                     </div>
                 </div>
                 <div class=" col-1">
@@ -60,9 +112,81 @@
                         <span>Piano</span>
                     </div>
                     <div class="col-12">
-                        <span class="key">1</span> ...
-                        <span class="key">9</span>
-                        <span class="key">0</span>
+                        <span 
+                        onclick="sound(
+                            `pawL`,
+                            'keyboard1.mp3',
+                            `<img  class='pawleftdown' src='/images/paw-left-down-withe.svg' alt='.'>`,
+                            `keyboard` )"
+                        class="key">1</span> 
+                        <span 
+                        onclick="sound(
+                            `pawL`,
+                            'keyboard2.mp3',
+                            `<img  class='pawleftdown' src='/images/paw-left-down-withe.svg' alt='.'>`,
+                            `keyboard` )"
+                        class="key">2</span>
+                        <span 
+                        onclick="sound(
+                            `pawL`,
+                            'keyboard3.mp3',
+                            `<img  class='pawleftdown' src='/images/paw-left-down-withe.svg' alt='.'>`,
+                            `keyboard` )"
+                        class="key">3</span>
+                        <span 
+                        onclick="sound(
+                            `pawL`,
+                            'keyboard4.mp3',
+                            `<img  class='pawleftdown' src='/images/paw-left-down-withe.svg' alt='.'>`,
+                            `keyboard` )"
+                        class="key">4</span>
+                        <span 
+                        onclick="sound(
+                            `pawL`,
+                            'keyboard5.mp3',
+                            `<img  class='pawleftdown' src='/images/paw-left-down-withe.svg' alt='.'>`,
+                            `keyboard` )"
+                        class="key">5</span>
+                        <span 
+                        onclick="sound(
+                        `pawR`,
+                        'keyboard6.mp3',
+                        `<img  class='pawrigthdown' src='/images/paw-right-down.svg' alt='.'>`,
+                        `keyboard`
+                        )"
+                        class="key">6</span>
+                        <span 
+                        onclick="sound(
+                            `pawR`,
+                            'keyboard7.mp3',
+                            `<img  class='pawrigthdown' src='/images/paw-right-down.svg' alt='.'>`,
+                            `keyboard`
+                            )"
+                        class="key">7</span>
+                        <span 
+                        onclick="sound(
+                            `pawR`,
+                            'keyboard8.mp3',
+                            `<img  class='pawrigthdown' src='/images/paw-right-down.svg' alt='.'>`,
+                            `keyboard`
+                            )"
+                        class="key">8</span>
+                        <span 
+                        onclick="sound(
+                            `pawR`,
+                            'keyboard9.mp3',
+                            `<img  class='pawrigthdown' src='/images/paw-right-down.svg' alt='.'>`,
+                            `keyboard`
+                            )"
+                        class="key">9</span>
+                        <span 
+                        onclick="sound(
+                            `pawR`,
+                            'keyboard0.mp3',
+                            `<img  class='pawrigthdown' src='/images/paw-right-down.svg' alt='.'>`,
+                            `keyboard`
+                            )"
+                        class="key">0</span>
                     </div>
                 </div>
                 <div class="flex col-1">
@@ -70,9 +194,81 @@
                         <span>Marimba</span>
                     </div>
                     <div class="col-12">
-                        <span class="key">Q</span>
-                        <span class="key">W</span> ...
-                        <span class="key">P</span>
+                        <span 
+                        onclick="sound(
+                            `pawL`,
+                            'marimba1.mp3',
+                            `<img  class='pawleftdown' src='/images/paw-left-down-withe.svg' alt='.'>`,
+                            `marimba` )"
+                        class="key">Q</span>
+                        <span 
+                        onclick="sound(
+                            `pawL`,
+                            'marimba2.mp3',
+                            `<img  class='pawleftdown' src='/images/paw-left-down-withe.svg' alt='.'>`,
+                            `marimba` )"
+                        class="key">W</span> 
+                        <span 
+                        onclick="sound(
+                            `pawL`,
+                            'marimba3.mp3',
+                            `<img  class='pawleftdown' src='/images/paw-left-down-withe.svg' alt='.'>`,
+                            `marimba` )"
+                        class="key">E</span>
+                        <span 
+                        onclick="sound(
+                            `pawL`,
+                            'marimba4.mp3',
+                            `<img  class='pawleftdown' src='/images/paw-left-down-withe.svg' alt='.'>`,
+                            `marimba` )"
+                        class="key">R</span>
+                        <span 
+                        onclick="sound(
+                            `pawL`,
+                            'marimba5.mp3',
+                            `<img  class='pawleftdown' src='/images/paw-left-down-withe.svg' alt='.'>`,
+                            `marimba` )"
+                        class="key">T</span>
+                        <span 
+                        onclick="sound(
+                            `pawR`,
+                            'keyboard6.mp3',
+                            `<img  class='pawrigthdown' src='/images/paw-right-down.svg' alt='.'>`,
+                            `marimba`
+                            )"
+                        class="key">Y</span>
+                        <span 
+                        onclick="sound(
+                            `pawR`,
+                            'keyboard7.mp3',
+                            `<img  class='pawrigthdown' src='/images/paw-right-down.svg' alt='.'>`,
+                            `marimba`
+                            )"
+                        class="key">U</span>
+                        <span 
+                        onclick="sound(
+                            `pawR`,
+                            'keyboard8.mp3',
+                            `<img  class='pawrigthdown' src='/images/paw-right-down.svg' alt='.'>`,
+                            `marimba`
+                            )"
+                        class="key">I</span>
+                        <span 
+                        onclick="sound(
+                            `pawR`,
+                            'keyboard9.mp3',
+                            `<img  class='pawrigthdown' src='/images/paw-right-down.svg' alt='.'>`,
+                            `marimba`
+                            )"
+                        class="key">O</span>
+                        <span 
+                        onclick="sound(
+                            `pawR`,
+                            'keyboard0.mp3',
+                            `<img  class='pawrigthdown' src='/images/paw-right-down.svg' alt='.'>`,
+                            `marimba`
+                            )"
+                        class="key">P</span>
                     </div>
                 </div>
             </div>
@@ -80,9 +276,19 @@
         <div class="" id="conten">
             <hr>
             <img class="cat" src="./images/cat withe.svg" alt="">
-            <img class="pawrigthdown" src="/images/paw-right-down.svg" alt=".">
-            <img class="pawleftdown" src="/images/paw-left-down-withe.svg" alt="">
-            <img class="mouth" src="./images/mouth-withe-point.svg" alt="">
+           <div id="pawR">
+                <img  class="pawrigth" src="/images/paw-right-up.svg" alt=".">
+           </div>
+           <div id="pawL">
+                <img class="pawleft" src="/images/paw-left-up-withe.svg" alt="">
+           </div>
+            <div id="mouth">
+                <img  class="mouth" src="./images/mouth-withe.svg" alt="">
+            </div>
+            <div id="instrument">
+                <img  class="instrument" src="./images/bongo.png" alt="">
+            </div>
+            
         </div>
         <footer>
         </footer>
